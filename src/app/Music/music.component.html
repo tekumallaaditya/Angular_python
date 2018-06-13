@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="/Angular5-Seed-master/src/assets/css/bootstrap.min.css">
+        <script src="/Angular5-Seed-master/src/assets/js/bootstrap.min.js"></script>
+        <script src="/Angular5-Seed-master/src/assets/js/jquery-3.3.1.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script  src="/Angular5-Seed-master/src/assets/js/bootstrap.js"></script>
+        <script src="/Angular5-Seed-master/src/assets/js/npm.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" type="text/css" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    </head>
+    <body>
+           
+            <br/><br/><br/>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6"  *ngFor="let each of MusicInfo[0].artists" >
+                    <div class="thumbnail">
+                        <h1>Name: {{each.name}}</h1>
+                        <h1>Cover: {{each.cover}}</h1>                        
+                        <h1>Bio:{{each.bio}}</h1>                        
+                        <h1>Genre: {{each.genre}}</h1>
+                        <button type="button" data-toggle="modal" id="#exampleModal" class="btn btn-primary" href="#exampleModal" (click)="load(each, each.id)">Albums</button>                                               
+                                                
+                        
+                    </div>
+
+                </div>                
+                
+               
+            </div>
+
+        </div>      
+        
+        
+        
+        <!--Modal starts-->
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h2 align="center">Albums</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Album_id</th>
+                                        <th>Titel</th>
+                                        <th>Year</th>
+                                        <th>Cover</th>
+                                        <th>Price</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="push">
+                                    
+                                </tbody>
+
+                            </table>
+
+                        </div>
+                    
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>                    
+                    </div>
+                </div>
+                </div>
+        </div>
+
+        
+    </body>
+</html>

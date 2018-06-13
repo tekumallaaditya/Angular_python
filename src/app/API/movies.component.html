@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="/Angular5-Seed-master/src/assets/css/bootstrap.min.css">
+        <script src="/Angular5-Seed-master/src/assets/js/bootstrap.min.js"></script>
+        <script src="/Angular5-Seed-master/src/assets/js/jquery-3.3.1.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script  src="/Angular5-Seed-master/src/assets/js/bootstrap.js"></script>
+    </head>
+    <body>
+        <div class="panel panel-primary">
+            <h1 align="center">Below data is from the Movies API</h1>
+        </div>
+        <h1>{{handleError}}</h1>
+        <div class="container" >                        
+            <div class="col-md-4" *ngFor="let each of MovieDB" >
+                <div class="thumbnail">
+                    <a data-toggle="modal" href="#mymodal"><img id="{{each.id}}" src="{{each.imageUrl}}" (click)="load(this)"></a> 
+                    <div class="caption">
+                        <h3>Name:{{each.name}}</h3>
+                        <h3>Language:{{each.language}}</h3>
+                        <h3>Rating:{{each.rate}}</h3>
+                        <h3>Genre:{{each.type}}</h3>
+                    </div>
+                </div>                
+                <br/><br/><br/><br/>           
+            </div>            
+        </div>      
+        
+
+        <!--Modal starts here-->
+        <div class="modal fade" id="mymodal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 id="myheader"></h2>
+                    </div>
+                    <div class="modal-body" id="mybody">
+                        <h3 id="mybodyLanguage"></h3>
+                        <h3 id="mybodyRating"></h3>
+                        <h3 id="mybodyType"></h3>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <!--Modal ends here-->
+    </body>
+</html>

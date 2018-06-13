@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="/Angular5-Seed-master/src/assets/css/bootstrap.min.css">
+        <script src="/Angular5-Seed-master/src/assets/js/bootstrap.min.js"></script>
+        <script src="/Angular5-Seed-master/src/assets/js/jquery-3.3.1.js"></script>
+    </head>
+    <body>
+        <h1 align = "center">This comes under User component</h1>
+        <div class="container">
+            <div class="row">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone Number</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor = "let each of UserInfo">
+                                <td>{{each.name}}</td>
+                                <td>{{each.email}}</td>
+                                <td>{{each.num}}</td>
+                            </tr>
+                            
+                        </tbody>
+
+                    </table>
+                    
+
+                </div>
+
+            </div>
+
+        </div>
+    </body>
+</html>

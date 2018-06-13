@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="/Angular5-Seed-master/src/assets/css/bootstrap.min.css">
+        <script src="/Angular5-Seed-master/src/assets/js/bootstrap.min.js"></script>
+        <script src="/Angular5-Seed-master/src/assets/js/jquery-3.3.1.js"></script>
+    </head>
+    <body>
+        <div class="panel panel-primary" style="background-color:aqua">
+            <h1 align="center">LineStatus of L1 Regression</h1>
+        </div>        
+        <div class="container">
+            <div class="row">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>ControlPC</th>
+                                <th>RemoteUser</th>
+                                <th>Target</th>
+                                <th>RemoteUser</th>
+                                <th>UE</th>
+                                <th>Status</th>
+                                <th>Path</th>
+                                <th>Scenario</th>
+                                <th>Since</th>
+                                <th>UsageStat</th>
+                                <th>QueuedBuilds</th>
+                            </tr>
+                        </thead>
+                        <tbody *ngFor="let each of info">
+                            <td>{{each | SortInfo:0}}</td>
+                            <td>{{each | SortInfo:1}}</td>
+                            <td>{{each | SortInfo:2}}</td>
+                            <td>{{each | SortInfo:3}}</td>
+                            <td>{{each | SortInfo:4}}</td>
+                            <td>{{each | SortInfo:5}}</td>
+                            <td>{{each | SortInfo:6}}</td>
+                            <td>{{each | SortInfo:7}}</td>
+                            <td>{{each | SortInfo:8}}</td>
+                            <td>{{each | SortInfo:9}}</td>
+                            <td>{{each | SortInfo:10}}</td>                            
+                        </tbody>
+
+                    </table>
+                </div>
+
+            </div>
+
+        </div>
+    </body>
+</html>
